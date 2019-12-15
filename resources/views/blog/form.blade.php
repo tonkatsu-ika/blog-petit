@@ -25,9 +25,24 @@
           <label for="article">記事の内容</label>
           <textarea class="form-control" name="article" rows="5">{{ $blog->article }}</textarea>
         </div>
+        @if($target == 'store')
+        <button type="submit" class="btn btn-default">新規投稿</button>
+        @else
         <button type="submit" class="btn btn-default">更新</button>
-        <a href="/blog">一覧画面へ戻る</a>
+        @endif
       </form>
     </div>
+    @if($target == 'update')
+    <div class="col-md-8 col-md-offset-1">
+      <form action="/blog/{{ $blog->id }}" method="post">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-default">削除</button>
+      </form>
+    </div>
+  @endif
+  </div>
+  <div class="row">
+    <a href="/blog">一覧画面へ戻る</a>
   </div>
 </div>
