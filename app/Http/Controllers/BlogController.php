@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\BlogRequest;
 use App\Blog;
+
 
 class BlogController extends Controller
 {
@@ -20,7 +22,7 @@ class BlogController extends Controller
       return view('blog/create', compact('blog'));
     }
 
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
       $blog = new Blog();
       $blog->title = $request->title;
@@ -36,7 +38,7 @@ class BlogController extends Controller
       return view('blog/edit', compact('blog'));
     }
 
-    public function update(Request $request, $id)
+    public function update(BlogRequest $request, $id)
     {
       $blog = Blog::findOrFail($id);
       $blog->title = $request->title;

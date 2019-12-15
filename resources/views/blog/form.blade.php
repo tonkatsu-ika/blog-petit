@@ -10,6 +10,7 @@
   </div>
   <div class="row">
     <div class="col-md-8 col-md-offset-1">
+      @include('blog/message')
       @if($target == 'store')
       <form action="/blog" method="post">
       @elseif($target == 'update')
