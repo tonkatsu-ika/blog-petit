@@ -17,6 +17,6 @@ class BlogController extends Controller
     public function edit($id)
     {
       $blog = Blog::findOrFail($id);
-      return view('blog/edit', compact('book'));
+      return view('blog/edit', compact('blog'));
     }
 }
