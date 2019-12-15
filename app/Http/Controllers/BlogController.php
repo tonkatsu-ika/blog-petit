@@ -14,6 +14,22 @@ class BlogController extends Controller
       return view('blog/index', compact('blogs'));
     }
 
+    public function create()
+    {
+      $blog = new Blog();
+      return view('blog/create', compact('blog'));
+    }
+
+    public function store(Request $request)
+    {
+      $blog = new Blog();
+      $blog->title = $request->title;
+      $blog->article = $request->article;
+      $blog->save();
+
+      return redirect("/blog");
+    }
+
     public function edit($id)
     {
       $blog = Blog::findOrFail($id);
@@ -36,4 +52,5 @@ class BlogController extends Controller
       $blog->delete();
 
       return redirect("/blog");
+    }
 }

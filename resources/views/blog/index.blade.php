@@ -26,6 +26,9 @@
       </table>
     </div>
   </div>
+  <div class="row">
+    <button type="button" class="btn btn-default">新規投稿</button>
+  </div>
 </div>
 
 @endsection
