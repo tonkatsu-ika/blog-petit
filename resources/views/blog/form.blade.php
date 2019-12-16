@@ -44,6 +44,6 @@
   @endif
   </div>
   <div class="row">
-    <a href="/blog">一覧画面へ戻る</a>
+    <a href="/">一覧画面へ戻る</a>
   </div>
 </div>
