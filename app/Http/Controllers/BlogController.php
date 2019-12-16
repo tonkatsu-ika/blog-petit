@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogRequest;
 use App\Blog;
@@ -27,6 +28,7 @@ class BlogController extends Controller
       $blog = new Blog();
       $blog->title = $request->title;
       $blog->article = $request->article;
+      $blog->user_id = Auth::user()->id;
       $blog->save();
 
       return redirect("/");
@@ -43,6 +45,7 @@ class BlogController extends Controller
       $blog = Blog::findOrFail($id);
       $blog->title = $request->title;
       $blog->article = $request->article;
+      $blog->user_id = Auth::user()->id;
       $blog->save();
 
       return redirect("/");
