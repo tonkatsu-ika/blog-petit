@@ -29,7 +29,7 @@ class BlogController extends Controller
       $blog->article = $request->article;
       $blog->save();
 
-      return redirect("/blog");
+      return redirect("/");
     }
 
     public function edit($id)
@@ -45,7 +45,7 @@ class BlogController extends Controller
       $blog->article = $request->article;
       $blog->save();
 
-      return redirect("/blog");
+      return redirect("/");
     }
 
     public function destroy($id)
