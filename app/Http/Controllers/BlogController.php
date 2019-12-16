@@ -53,6 +53,6 @@ class BlogController extends Controller
       $blog = Blog::findOrFail($id);
       $blog->delete();
 
-      return redirect("/blog");
+      return redirect("/");
     }
 }
