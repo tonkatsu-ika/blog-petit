@@ -11,4 +11,6 @@
 |
 */
 
-Route::resource('blog', 'BlogController');
+Route::get('/', 'BlogController@index'); 
+
+Route::resource('blog', 'BlogController', ['except' => ['index']]);
