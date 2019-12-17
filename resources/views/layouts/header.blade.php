@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Blog Petit</h1>
+        <h1 class="text-center">Blog Petit</h1>
       </div>
     </div>
     <div class="row">
