@@ -1,41 +1,26 @@
-<nav class="navbar shadow-sm">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-sm-4 text-center">
-        <a class="list-group-item list-group-item-action" href="/">HOME</a>
-      </div>
-
-      <!-- Authentication links -->
-      @guest
-        <div class="col-sm-4 text-center">
-          <a class="list-group-item list-group-item-action" href="{{ route('login') }}">
-            {{ __('ログイン') }}
-          </a>
-        </div>
-      
-          @if (Route::has('register'))
-          <div class="col-sm-4 text-center">
-            <a class="list-group-item list-group-item-action" href="{{ route('register') }}">
-              {{ __('ユーザ登録') }}
-            </a>
-          </div>
-          @endif
-
-       @else
-
-          <div class="col-sm-4 text-center">
-            <form id="logout-form" action="{{ route('logout') }}" method="POST">
-              @csrf
-              <button type="submit" class="list-group-item list-group-item-action text-center">
-                ログアウト
-              </button>
-            </form>
-          </div>
-
-       @endguest
-
-    </div>
+<nav class="navbar">
+  <div class="navbar-left">
+    <a class="navbar-left__item" href="/">HOME</a>
   </div>
+  <!-- Authentication links -->
+  @guest
+  <div class="navbar-right">
+    <a class="navbar-right__item" href="{{ route('login') }}">
+      {{ __('ログイン') }}
+    </a>
+    @if (Route::has('register'))
+      <a class="navbar-right__item" href="{{ route('register') }}">
+        {{ __('ユーザ登録') }}
+      </a>
+    @endif
+   @else
+   <form id="logout-form" action="{{ route('logout') }}" method="POST">
+     @csrf
+     <button type="submit" class="navbar-right__item">
+       ログアウト
+     </button>
+   </form>
+  </div>
+  @endguest
 </nav>
 
