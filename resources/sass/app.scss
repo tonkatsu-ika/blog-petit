@@ -1,3 +1,6 @@
+// Reset
+@import 'config/reset';
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -6,3 +9,7 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Original Modules
+@import 'config/common';
+@import 'modules/layouts/header';

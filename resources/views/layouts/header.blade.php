@@ -1,17 +1,17 @@
-<header class="stickey-top text-muted">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="text-center">Blog Petit</h1>
-      </div>
+<header class="header">
+  <div class="header-container">
+    <div class="header-container__title-container">
+      <h1 class="header-container__title-container__title">Blog Petit</h1>
     </div>
+
     @auth
-    <div class="col-md-12 text-center">
+    <div class="header-container__user-name">
       {{ Auth::user()->name }}でログイン中
     </div>
     @endauth
-    <div class="row">
-      @include('layouts.navbar')
-    </div>
+
   </div>
+    
+  @include('layouts.navbar')
+
 </header>
