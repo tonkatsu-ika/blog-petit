@@ -23,15 +23,16 @@
           @endif
 
        @else
-          <div class="col-sm-4 text-center">
-            <a class="list-group-item list-group-item-action" href="{{ route('logout') }}">
-              ログアウト
-            </a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
+          <div class="col-sm-4 text-center">
+            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+              @csrf
+              <button type="submit" class="list-group-item list-group-item-action text-center">
+                ログアウト
+              </button>
             </form>
           </div>
+
        @endguest
 
     </div>
