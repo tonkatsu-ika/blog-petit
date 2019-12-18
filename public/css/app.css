@@ -11782,11 +11782,10 @@ body {
   width: 80%;
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
 }
 
 .navbar .navbar-left__item {
+  margin-right: 20px;
   height: 100%;
   line-height: 100%;
   display: inline-block;

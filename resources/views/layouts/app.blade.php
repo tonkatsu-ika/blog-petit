@@ -23,10 +23,12 @@
 </head>
 <body>
 
-  @include('layouts.header')
+  <div>
+    @include('layouts.header')
+  </div>
 
   <main class="py-4">
-      @yield('content')
+    @yield('content')
   </main>
 
 </body>

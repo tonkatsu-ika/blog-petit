@@ -1,6 +1,7 @@
 <nav class="navbar">
   <div class="navbar-left">
     <a class="navbar-left__item" href="/">HOME</a>
+    <a class="navbar-left__item" href="/blog/create">新規投稿</a>
   </div>
   <!-- Authentication links -->
   @guest
