@@ -13,13 +13,19 @@ class BlogController extends Controller
 {
     public function __construct()
     {
-      $this->middleware('auth', ['except' => 'index']);
+      $this->middleware('auth', ['except' => 'index, show']);
     }
 
     public function index()
     {
       $blogs = Blog::all();
       return view('blog/index', compact('blogs'));
+    }
+
+    public function show($id)
+    {
+      $blog = Blog::findOrFail($id);
+      return view('blog/show', compact('blog'));
     }
 
     public function create()
