@@ -41,7 +41,7 @@
         <button type="submit" class="btn btn-default">削除</button>
       </form>
     </div>
-  @endif
+    @endif
   </div>
   <div class="row">
     <a href="/">一覧画面へ戻る</a>

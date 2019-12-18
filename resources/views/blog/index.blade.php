@@ -7,7 +7,10 @@
   <div class="blog">
     <div class="blog__blog-info">
       <div class="blog__blog-info__title">
-        {{ $blog->title }}
+        タイトル：{{ $blog->title }}
+      </div>
+      <div class="blog__blog-info__user-name">
+        ユーザ名：{{ Auth::user()->name }}
       </div>
       <a href="/blog/{{ $blog->id }}/edit">{{ $blog->id }}</a>
 
