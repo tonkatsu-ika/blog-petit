@@ -11740,7 +11740,7 @@ a.text-dark:focus {
 *,
 body {
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: none;
 }
 
 .header {
