@@ -1,15 +1,16 @@
 .blogs {
-  width: 80%;
+  max-width: 650px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   .blog {
     width: 200px;
     height: 250px;
-    margin: 0 10px 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     position: relative;
+    margin-bottom: 10px;
     &__blog-info {
       width: 100%;
       position: absolute;
@@ -24,6 +25,15 @@
     &__image {
       
     }
+  }
+}
+.pagination {
+  max-width: 650px;
+  margin: 0 auto;
+  &__container {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
   }
 }
 

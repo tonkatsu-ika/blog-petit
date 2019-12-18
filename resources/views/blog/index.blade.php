@@ -1,6 +1,7 @@
 @extends('layouts/app')
 @section('content')
 
+
 <div class="blogs">
 
   @foreach($blogs as $blog)
@@ -20,5 +21,12 @@
   @endforeach
 
 </div>
+
+<div class="pagination"> 
+  <div class="pagination__container">
+    {{ $blogs->links() }}
+  </div>
+</div>
+
 
 @endsection

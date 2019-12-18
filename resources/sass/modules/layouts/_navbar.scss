@@ -1,9 +1,12 @@
 .navbar {
+  font-size: 14px;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
   height: $navbar-h;
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
   margin-bottom: 20px;
   .navbar-left {
@@ -33,6 +36,12 @@
       color: #333;
       &:hover {
         color: #666;
+      }
+      &__btn {
+        height: 100%;
+        line-height: 100%;
+        border: none;
+        background-color: none;
       }
     }
   }

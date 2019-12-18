@@ -1,19 +1,21 @@
 .header {
   box-sizing: border-box;
   height: $header-h;
-  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
   .header-container {
     display: flex;
     justify-content: space-between;
-    background-color: #ddd;
     &__title-container {
       &__title {
-        margin-left: 10px;
+        margin-left: 20px;
         line-height: $header-h;
       }  
     }
     &__user-name {
+      margin-right: 20px;
       line-height: $header-h;
+      color: #666;
     }
   }
 }
