@@ -1,7 +1,22 @@
 .blogs {
   width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
   .blog {
+    width: 30%;
+    height: 250px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
     &__blog-info {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      background-color: #eee;
       &__title {
 
       }
