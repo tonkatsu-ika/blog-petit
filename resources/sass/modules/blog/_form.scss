@@ -1,0 +1,11 @@
+.form-container {
+  max-width: 650px;
+  margin: 0 auto;
+  &__home-button {
+    margin: 0 auto;
+    margin-top: 10px;
+    &__btn {
+      width: 57px;
+    }
+  }
+}

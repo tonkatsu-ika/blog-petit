@@ -11866,3 +11866,17 @@ body {
   margin-top: 20px;
 }
 
+.form-container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.form-container__home-button {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.form-container__home-button__btn {
+  width: 57px;
+}
+

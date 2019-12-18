@@ -1,4 +1,4 @@
-<div class="container ops-main">
+<div class="form-container container ops-main">
   <div class="row">
     <div class="col-md-6">
       @if($target == 'store')
@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 col-md-offset-1">
+    <div class="col-md-10 col-md-offset-1">
       @include('blog/message')
       @if($target == 'store')
       <form action="/blog" method="post">
@@ -27,14 +27,14 @@
           <textarea class="form-control" name="article" rows="5">{{ $blog->article }}</textarea>
         </div>
         @if($target == 'store')
-        <button type="submit" class="btn btn-default">新規投稿</button>
+        <button type="submit" class="btn btn-primary">新規投稿</button>
         @else
-        <button type="submit" class="btn btn-default">更新</button>
+        <button type="submit" class="btn btn-primary">更新</button>
         @endif
       </form>
     </div>
   </div>
-  <div class="row">
-    <a href="/">一覧画面へ戻る</a>
+  <div class="row form-container__home-button">
+    <a href="/" class="btn btn-outline-primary form-container__home-button__btn">HOME</a>
   </div>
 </div>
