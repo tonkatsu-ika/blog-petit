@@ -11,6 +11,11 @@ use App\Blog;
 
 class BlogController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('auth', ['except' => 'index']);
+    }
+
     public function index()
     {
       $blogs = Blog::all();
