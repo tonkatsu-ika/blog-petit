@@ -23,9 +23,8 @@
 </head>
 <body>
 
-  <div>
-    @include('layouts.header')
-  </div>
+  @include('layouts.header')
+  @include('layouts.navbar')
 
   <main class="py-4">
     @yield('content')

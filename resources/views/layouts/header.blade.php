@@ -11,7 +11,5 @@
     @endauth
 
   </div>
-    
-  @include('layouts.navbar')
 
 </header>

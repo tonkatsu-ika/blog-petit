@@ -16,10 +16,6 @@
   </div>
   @endforeach
 
-    <a href="blog/create">
-      <button type="button" class="btn btn-default">新規投稿</button>
-    </a>
-
 </div>
 
 @endsection
