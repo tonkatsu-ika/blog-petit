@@ -10,7 +10,7 @@
       <img src="{{ $blog->image_url }}">
     </div>
     <div class="blog-container__author">
-      投稿者：{{ $blog->user_id }}
+      投稿者：{{ $blog->user->name }}
     </div>
     <div class="blog-container__article">
       記事：{{ $blog->article }}
