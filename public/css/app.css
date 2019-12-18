@@ -11784,7 +11784,7 @@ body {
 }
 
 .navbar .navbar-left {
-  width: 80%;
+  width: 75%;
   display: -webkit-box;
   display: flex;
 }
@@ -11803,7 +11803,7 @@ body {
 }
 
 .navbar .navbar-right {
-  width: 20%;
+  width: 25%;
   display: -webkit-box;
   display: flex;
   justify-content: space-around;
@@ -11825,7 +11825,7 @@ body {
   height: 100%;
   line-height: 100%;
   border: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 .blogs {
