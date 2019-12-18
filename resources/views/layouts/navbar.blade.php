@@ -1,7 +1,9 @@
 <nav class="navbar">
   <div class="navbar-left">
     <a class="navbar-left__item" href="/">HOME</a>
+    @if (Auth::check())
     <a class="navbar-left__item" href="/blog/create">新規投稿</a>
+    @endif
   </div>
   <!-- Authentication links -->
   @guest
