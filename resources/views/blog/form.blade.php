@@ -33,15 +33,6 @@
         @endif
       </form>
     </div>
-    @if($target == 'update')
-    <div class="col-md-8 col-md-offset-1">
-      <form action="/blog/{{ $blog->id }}" method="post">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="btn btn-default">削除</button>
-      </form>
-    </div>
-    @endif
   </div>
   <div class="row">
     <a href="/">一覧画面へ戻る</a>
