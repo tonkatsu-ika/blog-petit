@@ -1,9 +1,9 @@
 .navbar {
+  box-sizing: border-box;
   width: 100%;
   height: $navbar-h;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
   margin-bottom: 20px;
   .navbar-left {

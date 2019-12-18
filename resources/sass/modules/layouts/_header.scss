@@ -2,14 +2,13 @@
   box-sizing: border-box;
   height: $header-h;
   width: 100%;
-  margin-bottom: 10px;
   .header-container {
     display: flex;
     justify-content: space-between;
-    padding: 8px;
     background-color: #ddd;
     &__title-container {
       &__title {
+        margin-left: 10px;
         line-height: $header-h;
       }  
     }
