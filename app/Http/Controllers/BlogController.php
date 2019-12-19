@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Blog;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogRequest;
-use App\Blog;
-
 
 class BlogController extends Controller
 {
@@ -42,7 +41,7 @@ class BlogController extends Controller
       $blog->user_id = Auth::user()->id;
       $blog->save();
 
-      return redirect("/");
+      return redirect('/');
     }
 
     public function edit($id)
@@ -59,14 +58,14 @@ class BlogController extends Controller
       $blog->user_id = Auth::user()->id;
       $blog->save();
 
-      return redirect("/");
+      return redirect('/');
     }
 
     public function destroy($id)
     {
-      $blog = Blog::findOrFail($id);
-      $blog->delete();
+        $blog = Blog::findOrFail($id);
+        $blog->delete();
 
-      return redirect("/");
+        return redirect('/');
     }
 }
