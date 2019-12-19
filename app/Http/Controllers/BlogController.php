@@ -12,53 +12,53 @@ class BlogController extends Controller
 {
     public function __construct()
     {
-      $this->middleware('auth', ['except' => 'index, show']);
+        $this->middleware('auth', ['except' => 'index, show']);
     }
 
     public function index()
     {
-      $blogs = Blog::paginate(6);
-      return view('blog/index', compact('blogs'));
+        $blogs = Blog::paginate(6);
+        return view('blog/index', compact('blogs'));
     }
 
     public function show($id)
     {
-      $blog = Blog::findOrFail($id);
-      return view('blog/show', compact('blog'));
+        $blog = Blog::findOrFail($id);
+        return view('blog/show', compact('blog'));
     }
 
     public function create()
     {
-      $blog = new Blog();
-      return view('blog/create', compact('blog'));
+        $blog = new Blog();
+        return view('blog/create', compact('blog'));
     }
 
     public function store(BlogRequest $request)
     {
-      $blog = new Blog();
-      $blog->title = $request->title;
-      $blog->article = $request->article;
-      $blog->user_id = Auth::user()->id;
-      $blog->save();
-
-      return redirect('/');
+        $blog = new Blog();
+        $blog->title = $request->title;
+        $blog->article = $request->article;
+        $blog->user_id = Auth::user()->id;
+        $blog->save();
+  
+        return redirect('/');
     }
 
     public function edit($id)
     {
-      $blog = Blog::findOrFail($id);
-      return view('blog/edit', compact('blog'));
+        $blog = Blog::findOrFail($id);
+        return view('blog/edit', compact('blog'));
     }
 
     public function update(BlogRequest $request, $id)
     {
-      $blog = Blog::findOrFail($id);
-      $blog->title = $request->title;
-      $blog->article = $request->article;
-      $blog->user_id = Auth::user()->id;
-      $blog->save();
-
-      return redirect('/');
+        $blog = Blog::findOrFail($id);
+        $blog->title = $request->title;
+        $blog->article = $request->article;
+        $blog->user_id = Auth::user()->id;
+        $blog->save();
+  
+        return redirect('/');
     }
 
     public function destroy($id)
