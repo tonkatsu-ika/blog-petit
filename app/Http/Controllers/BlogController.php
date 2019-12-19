@@ -35,9 +35,12 @@ class BlogController extends Controller
 
     public function store(BlogRequest $request)
     {
+        //dd($request->all());
+
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->article = $request->article;
+        $blog->image_url = $request->image_url->store('public/images');
         $blog->user_id = Auth::user()->id;
         $blog->save();
   
@@ -57,6 +60,7 @@ class BlogController extends Controller
         $blog = Blog::findOrFail($id);
         $blog->title = $request->title;
         $blog->article = $request->article;
+        $blog->image_url = $request->image_url;
         $blog->user_id = Auth::user()->id;
         $blog->save();
   

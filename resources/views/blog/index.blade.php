@@ -16,7 +16,7 @@
       <a href="/blog/{{ $blog->id }}">詳細を表示する</a>
 
     </div>
-    <img class="blog__image" src="{{ $blog->image_url }}">
+    <img class="blog__image" src="{{ Storage::url($blog->image_url) }}">
   </div>
   @endforeach
 

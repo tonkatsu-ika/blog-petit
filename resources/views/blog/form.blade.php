@@ -12,11 +12,12 @@
     <div class="col-md-10 col-md-offset-1">
       @include('blog/message')
       @if($target == 'store')
-      <form action="/blog" method="post">
+      <form action="/blog" method="post" enctype="multipart/form-data">
       @elseif($target == 'update')
-      <form action="/blog/{{ $blog->id }}" method="post">
+      <form action="/blog/{{ $blog->id }}" method="post" enctype="multipart/form-data">
         <input type="hidden" name="_method" value="PUT">
       @endif
+        {{ csrf_field() }}
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
           <label for="title">ブログのタイトル</label>
@@ -26,6 +27,15 @@
           <label for="article">記事の内容</label>
           <textarea class="form-control" name="article" rows="5">{{ $blog->article }}</textarea>
         </div>
+        <!-- 画像 -->
+        @isset ($blog->image_url)
+        <div>
+          <img src="{{ asset('storage/' . $blog->image_url) }}"> 
+        </div>
+        @endisset
+
+        <label for="image_url">画像ファイル</label>
+        <input type="file" class="form-control" name="image_url">
         @if($target == 'store')
         <button type="submit" class="btn btn-primary">新規投稿</button>
         @else
