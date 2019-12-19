@@ -11880,3 +11880,8 @@ body {
   width: 57px;
 }
 
+.blog-show {
+  max-width: 650px;
+  margin: 0 auto;
+}
+

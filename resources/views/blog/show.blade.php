@@ -6,9 +6,11 @@
     <h2 class="blog-container__title">
       タイトル：{{ $blog->title }}
     </h2>
+    @if ($blog->image_url)
     <div class="blog-container__image">
       <img src="{{ $blog->image_url }}">
     </div>
+    @endif
     <div class="blog-container__author">
       投稿者：{{ $blog->user->name }}
     </div>
@@ -16,20 +18,22 @@
       記事：{{ $blog->article }}
     </div>
   </div>
+  @if (Auth::user()->id == $blog->user->id)
   <div class="action-container">
-    <a class="action-container__edit" href="/blog/{{ $blog->id }}/edit">
+    <a class="btn btn-primary action-container__edit" href="/blog/{{ $blog->id }}/edit">
       編集する
     </a>
     <div class="action-container__destroy">
       <form action="/blog/{{ $blog->id }}" method="post">
         @csrf
         @method('DELETE')
-        <button type="submit" class="action-container__destroy__btn">
+        <button type="submit" class="btn btn-outline-danger action-container__destroy__btn">
           削除する
         </button>
       </form>
     </div>
   </div>
+  @endif
 </div>
 
 @endsection
