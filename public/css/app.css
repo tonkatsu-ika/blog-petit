@@ -11881,7 +11881,38 @@ body {
 }
 
 .blog-show {
+  box-sizing: border-box;
   max-width: 650px;
   margin: 0 auto;
+  padding: 10px;
+}
+
+.blog-show .blog-container__title {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.blog-show .blog-container__author {
+  size: 15px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+.blog-show .blog-container__article {
+  size: 16px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+}
+
+.blog-show .action-container {
+  display: -webkit-box;
+  display: flex;
+  height: 25px;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.blog-show .action-container__destroy {
+  margin-left: 10px;
 }
 
