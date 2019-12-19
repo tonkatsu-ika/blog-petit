@@ -47,6 +47,8 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::findOrFail($id);
+
+        $this->authorize('edit', $blog);
         return view('blog/edit', compact('blog'));
     }
 
