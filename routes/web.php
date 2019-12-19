@@ -11,10 +11,10 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', 'BlogController@index');
 
 Route::resource('blog', 'BlogController', ['except' => ['index']]);
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

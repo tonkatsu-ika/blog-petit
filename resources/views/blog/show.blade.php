@@ -18,6 +18,7 @@
       記事：{{ $blog->article }}
     </div>
   </div>
+  @if (Auth::check())
   @if (Auth::user()->id == $blog->user->id)
   <div class="action-container">
     <a class="btn btn-primary action-container__edit" href="/blog/{{ $blog->id }}/edit">
@@ -33,6 +34,7 @@
       </form>
     </div>
   </div>
+  @endif
   @endif
 </div>
 
