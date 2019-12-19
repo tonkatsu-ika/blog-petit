@@ -11,7 +11,7 @@
         タイトル：{{ $blog->title }}
       </div>
       <div class="blog__blog-info__user-name">
-        ユーザ名：{{ Auth::user()->name }}
+        ユーザ名：{{ $blog->user->name }}
       </div>
       <a href="/blog/{{ $blog->id }}">詳細を表示する</a>
 
