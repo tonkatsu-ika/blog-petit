@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // 追加したproviders
-        Intervention\Immage\ImageServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*

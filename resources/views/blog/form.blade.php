@@ -12,9 +12,9 @@
     <div class="col-md-10 col-md-offset-1">
       @include('blog/message')
       @if($target == 'store')
-      <form action="/blog" method="post" enctype="multipart/form-data">
+      <form action="{{ action('BlogController@store') }}" method="post" enctype="multipart/form-data">
       @elseif($target == 'update')
-      <form action="/blog/{{ $blog->id }}" method="post" enctype="multipart/form-data">
+      <form action="{{ action('BlogController@update', $blog->id) }}" method="post" enctype="multipart/form-data">
         <input type="hidden" name="_method" value="PUT">
       @endif
         {{ csrf_field() }}
