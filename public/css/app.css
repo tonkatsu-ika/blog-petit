@@ -11855,6 +11855,10 @@ body {
   background-color: #eee;
 }
 
+.blogs .blog__image {
+  width: 100%;
+}
+
 .pagination {
   max-width: 650px;
   margin: 0 auto;
