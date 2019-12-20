@@ -11872,7 +11872,17 @@ body {
 
 .form-container {
   max-width: 650px;
-  margin: 0 auto;
+}
+
+.form-container__image-preview {
+  margin-bottom: 10px;
+}
+
+.form-container__image-uploader {
+  height: 30px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #eee;
 }
 
 .form-container__home-button {

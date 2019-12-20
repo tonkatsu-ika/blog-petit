@@ -1,6 +1,14 @@
 .form-container {
   max-width: 650px;
-  margin: 0 auto;
+  &__image-preview {
+    margin-bottom: 10px;
+  }
+  &__image-uploader {
+    height: 30px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #eee;
+  }
   &__home-button {
     margin: 0 auto;
     margin-top: 10px;

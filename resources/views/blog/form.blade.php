@@ -29,13 +29,13 @@
         </div>
         <!-- 画像 -->
         @isset ($blog->image_url)
-        <div>
+        <div class="form-container__image-preview">
           <img src="{{ asset('storage/' . $blog->image_url) }}"> 
         </div>
         @endisset
 
-        <label for="image_url">画像ファイル</label>
-        <input type="file" class="form-control" name="image_url">
+        <label for="image_url">画像ファイルのアップロード（1枚）</label>
+        <input type="file" class="form-control form-container__image-uploader" name="image_url">
         @if($target == 'store')
         <button type="submit" class="btn btn-primary">新規投稿</button>
         @else
