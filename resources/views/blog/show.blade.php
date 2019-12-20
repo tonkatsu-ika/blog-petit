@@ -8,7 +8,7 @@
     </h2>
     @if ($blog->image_url)
     <div class="blog-container__image">
-      <img src="{{ $blog->image_url }}">
+      <img src="{{ Storage::url($blog->image_url) }}">
     </div>
     @endif
     <div class="blog-container__author">

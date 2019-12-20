@@ -11894,18 +11894,23 @@ body {
 .blog-show .blog-container__title {
   margin-bottom: 15px;
   border-bottom: 1px solid #ccc;
+  font-weight: bold;
 }
 
 .blog-show .blog-container__author {
-  size: 15px;
+  font-size: 12px;
+  margin-top: 10px;
   margin-bottom: 15px;
-  margin-left: 5px;
+  padding: 2px;
 }
 
 .blog-show .blog-container__article {
-  size: 16px;
+  min-height: 100px;
+  font-size: 16px;
   margin-bottom: 30px;
-  margin-left: 5px;
+  border: 1px dotted #ccc;
+  border-radius: 4px;
+  padding: 4px;
 }
 
 .blog-show .action-container {
